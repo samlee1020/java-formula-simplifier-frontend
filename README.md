@@ -1,6 +1,6 @@
 # 公式化简工作台
 
-一个用于调用 Java 公式化简后端的 Vite + React 前端。这个项目源于 samlee1020 的课程学习，功能较弱仅供娱乐。
+一个用于调用 Java 公式化简后端（render上docker部署，spring boot结构）的 Vite + React 前端。这个项目源于 samlee1020 的课程学习，功能较弱仅供娱乐。
 
 - [前端仓库](https://github.com/samlee1020/java-formula-simplifier-frontend)
 - [后端仓库](https://github.com/samlee1020/java-formula-simplifier-service)
