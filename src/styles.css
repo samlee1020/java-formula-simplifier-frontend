@@ -143,25 +143,50 @@ h3 {
   border-radius: 8px;
 }
 
+.health-cluster {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+  max-width: 320px;
+}
+
 .health-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-width: 112px;
+  min-width: 148px;
   justify-content: center;
   padding: 10px 12px;
   color: var(--text-soft);
   background: rgba(16, 18, 20, 0.72);
 }
 
-.health-up {
+.health-cluster p {
+  margin: 0;
+  color: var(--amber);
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.health-checking .health-pill {
+  color: var(--amber);
+  border-color: rgba(244, 189, 80, 0.42);
+  background: rgba(244, 189, 80, 0.08);
+}
+
+.health-up .health-pill {
   color: var(--signal);
   border-color: rgba(110, 231, 183, 0.35);
 }
 
-.health-down {
+.health-down .health-pill {
   color: var(--danger);
   border-color: rgba(251, 113, 133, 0.38);
+}
+
+.health-down p {
+  color: #fecdd3;
 }
 
 .workspace {
@@ -763,8 +788,14 @@ code {
     grid-template-columns: 1fr;
   }
 
-  .health-pill {
+  .health-cluster {
     justify-self: start;
+    justify-items: start;
+    max-width: 100%;
+  }
+
+  .health-cluster p {
+    text-align: left;
   }
 
   .panel-heading,

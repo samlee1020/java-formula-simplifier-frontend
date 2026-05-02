@@ -271,9 +271,15 @@ export default function App() {
             </a>
           </div>
         </div>
-        <div className={`health-pill health-${health}`}>
-          {health === "checking" ? <LoaderCircle className="spin" size={16} /> : <Activity size={16} />}
-          <span>{health === "checking" ? "检测中" : health === "up" ? "后端在线" : "后端离线"}</span>
+        <div className={`health-cluster health-${health}`}>
+          <div className="health-pill">
+            {health === "checking" ? <LoaderCircle className="spin" size={16} /> : <Activity size={16} />}
+            <span>{health === "checking" ? "正在唤醒后端" : health === "up" ? "后端在线" : "后端离线"}</span>
+          </div>
+          {health === "checking" && (
+            <p>Render Free 实例初次访问可能冷启动，请等待几分钟后再运行。</p>
+          )}
+          {health === "down" && <p>后端暂时不可用，可以稍后刷新重试。</p>}
         </div>
       </header>
 
